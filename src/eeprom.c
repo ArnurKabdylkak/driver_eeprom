@@ -171,7 +171,7 @@ bool eeprom_write_page(uint16_t address, uint8_t *data_ptr, uint16_t data_length
 			 * decrement data buffer length */
 			data_ptr++;
 			data_length--;
-			while ((I2C_SR1(I2C1) & I2C_SR1_TxE) == 0);
+			while ((I2C_SR1(I2C1) & I2C_SR1_TxE) == 0)
 		}
 		success = true;
 	}
